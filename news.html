@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="news.css">
+    <title>News Page</title>
+</head>
+<body>
+<link rel="stylesheet" href="news.css">
+
+<button class="back-button">Back</button> <!-- New back button -->
+
+<main>
+    
+  <ul class='slider'>
+    <li class='item' style="background-image: url('Fo.jpg')">
+      <div class='content'>
+        <h2 class='title'>"Football"</h2>
+        <p class='description'>Breaking: Exciting Matches Await in Upcoming Football Season! Get ready for the thrill of the world's most popular sport as football clubs gear up for intense competition on the field. Stay tuned for live updates, match analyses, and player interviews.</p>
+        <button>Read More</button>
+      </div>
+    </li>
+    <li class='item' style="background-image: url('F1.jpg')">
+      <div class='content'>
+        <h2 class='title'>"F1 Racing"</h2>
+        <p class='description'>Revving Up: Formula One Racing Season Promises High-Speed Action! The adrenaline-fueled world of F1 racing is back with heart-stopping races, cutting-edge technology, and fierce rivalries. Stay tuned for comprehensive race coverage, driver insights, and team updates.</p>
+        <button>Read More</button>
+      </div>
+    </li>
+    <li class='item' style="background-image: url('Cric.jpg')">
+      <div class='content'>
+        <h2 class='title'>"Cricket"</h2>
+        <p class='description'>Cricket Fever Grips Fans as T20 Leagues Heat Up! Brace yourself for sixes, wickets, and nail-biting finishes as cricket's shortest format takes center stage. Follow your favorite teams, catch live scores, and enjoy expert analysis throughout the thrilling cricket season.</p>
+        <button>Read More</button>
+      </div>
+    </li>
+    <li class='item' style="background-image: url('Ho.jpg')">
+      <div class='content'>
+        <h2 class='title'>"Horse Riding"</h2>
+        <p class='description'>Equestrian Excitement: Witness Thrilling Horse Riding Competitions! Gallop into the world of equestrianism as riders showcase their skills in dressage, show jumping, and eventing. Experience the grace, power, and beauty of these magnificent animals.</p>
+        <button>Read More</button>
+      </div>
+    </li>
+    <li class='item' style="background-image: url('Lt.jpg')">
+      <div class='content'>
+        <h2 class='title'>"Long Tennis"</h2>
+        <p class='description'>Game, Set, Match: Tennis Stars Ready for Grand Slam Glory! Prepare for intense rallies, epic showdowns, and Grand Slam drama as tennis players battle it out on the court. Follow the action, track player rankings, and catch up on the latest tennis news.</p>
+        <button>Read More</button>
+      </div>
+    </li>
+    <li class='item' style="background-image: url('Sw.jpg')">
+      <div class='content'>
+        <h2 class='title'>"Swimming"</h2>
+        <p class='description'>Dive into Excitement: Champions Make Waves in Competitive Swimming! Experience the thrill of speed, endurance, and precision in the world of competitive swimming. Stay updated on records broken, championships won, and inspiring stories from the pool.</p>
+        <button>Read More</button>
+      </div>
+    </li>
+  </ul>
+  <nav class='nav'>
+    <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+    <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+  </nav>
+</main>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    const slider = document.querySelector('.slider');
+
+    function activate(e) {
+        const items = document.querySelectorAll('.item');
+        if (e.target.classList.contains('next')) {
+            slider.append(items[0]);
+        } else if (e.target.classList.contains('prev')) {
+            slider.prepend(items[items.length-1]);
+        }
+    }
+
+    document.addEventListener('click',activate,false);
+
+    // Add functionality to the back button
+    const backButton = document.querySelector('.back-button');
+    backButton.addEventListener('click', () => {
+        // Handle back button click event (e.g., navigate back)
+        // For example, you can use window.history.back() to navigate back
+        window.history.back();
+    });
+</script>
+
+</body>
+</html>

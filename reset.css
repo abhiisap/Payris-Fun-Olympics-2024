@@ -1,0 +1,51 @@
+body {
+    background-image: url('haha.jpg'); /* Replace 'haha.jpg' with the actual filename of your background image */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: cover; /* Centers the background image */
+    font-family: Arial, sans-serif; /* Specify a fallback font-family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    background-color: transparent; /* Set container background to fully transparent */
+    padding: 20px; /* Add padding to the container */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    width: 80%; /* Set container width to 80% of the viewport */
+    max-width: 500px; /* Limit container width */
+    margin: auto; /* Center the container horizontally */
+    position: absolute; /* Position the container relative to the screen */
+    top: 50%; /* Align the top of the container to the middle of the screen */
+    left: 50%; /* Align the left side of the container to the middle of the screen */
+    transform: translate(-50%, -50%); /* Center the container precisely */
+    backdrop-filter: blur(8px); /* Apply blur effect to the container */
+    -webkit-backdrop-filter: blur(8px); /* Add vendor prefix for better browser support */
+}
+
+/* Adjust styles for form elements */
+input[type="email"],
+input[type="password"],
+button {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background to form fields */
+    border: 1px solid #ccc; /* Add border to form fields */
+    border-radius: 5px; /* Add border-radius to form fields */
+    padding: 8px; /* Add padding to form fields */
+    width: 100%; /* Set form field width to 100% */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-bottom: 10px; /* Add margin bottom to form fields */
+}
+
+label {
+    color: white; /* Set label color to white */
+    display: block; /* Ensure labels are on their own line */
+}
+
+/* Add styles for success and error messages (if needed) */
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}
